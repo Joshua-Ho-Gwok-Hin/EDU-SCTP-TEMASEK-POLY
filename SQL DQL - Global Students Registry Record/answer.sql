@@ -1,0 +1,72 @@
+-- 1. Getting familiar with both tables
+-- select * from users;
+-- select * from progress;
+-- select * from users
+-- join progress
+-- where users.user_id = progress.user_id
+-- order by users.email_domain;
+
+-- 2. What are the Top 25 schools(.edu domains)?
+-- select count(*) as NumberOfStudents, 
+-- email_domain as 'School Domain'
+-- from users where email_domain like '%edu'
+-- group by email_domain
+-- order by NumberOfStudents desc
+-- limit 25;
+
+-- 2. How many .edu learners are located in New York?
+-- select count(*) as 'Number of Learners located in New York, US',
+-- users.city as 'Student from City' from users 
+-- where email_domain like '%edu' 
+-- and country = 'US' and city = 'New York'
+-- group by users.city;
+
+-- 2. The mobile_app column contains either mobile-user or NULL. How many of these Codecademy learners are using the mobile app?
+-- select count(*) as 'Codecademy learners using mobile app',
+-- users.mobile_app as 'Mobile App Status' 
+-- from users where mobile_app = 'mobile-user'
+-- group by users.mobile_app;
+
+-- 3. Now, using this function, query for the sign up counts for each hour.
+-- SELECT strftime('%H', sign_up_at) as 'Sign up hour', 
+-- count(*) as 'Number of Sign ups' 
+-- from users group by 1;
+
+-- 4. Do different schools (.edu domains) prefer different courses?
+-- select users.email_domain, 
+-- count(case when progress.learn_cpp not in('') then 1 end) as "C++", 
+-- count(case when progress.learn_sql not in('') then 1 end) as "SQL", 
+-- count(case when progress.learn_html not in('') then 1 end) as "HTML", 
+-- count(case when progress.learn_javascript not in('') then 1 end) as "JavaScript", 
+-- count(case when progress.learn_java not in('') then 1 end) as "Java",
+-- count(users.email_domain) as "No. of Students"
+-- from users join progress
+-- on users.user_id = progress.user_id
+-- group by users.email_domain
+-- order by users.email_domain;
+
+-- 4. What courses are the New Yorkers students taking?
+-- select count(*) as 'Students from City',
+-- count(case when progress.learn_cpp not in('') then 1 end) as "Learning C++",
+-- count(case when progress.learn_sql not in('') then 1 end) as "Learning SQL",
+-- count(case when progress.learn_html not in('') then 1 end) as "Learning HTML",
+-- count(case when progress.learn_javascript not in('') then 1 end) as "Learning JavaScript",
+-- count(case when progress.learn_java not in('') then 1 end) as "Learning Java"
+-- from users join progress
+-- on users.user_id = progress.user_id
+-- where users.city = 'New York'
+-- group by users.city
+-- order by users.city;
+
+-- 4. What courses are the Chicago students taking?
+-- select count(*) as 'Students from City',
+-- count(case when progress.learn_cpp not in('') then 1 end) as "Learning C++",
+-- count(case when progress.learn_sql not in('') then 1 end) as "Learning SQL",
+-- count(case when progress.learn_html not in('') then 1 end) as "Learning HTML",
+-- count(case when progress.learn_javascript not in('') then 1 end) as "Learning JavaScript",
+-- count(case when progress.learn_java not in('') then 1 end) as "Learning Java"
+-- from users join progress
+-- on users.user_id = progress.user_id
+-- where users.city = 'Chicago'
+-- group by users.city
+-- order by users.city;

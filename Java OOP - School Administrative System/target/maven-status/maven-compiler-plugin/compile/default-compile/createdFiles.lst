@@ -1,0 +1,10 @@
+Main.class
+model\Course.class
+model\Student.class
+model\Module.class
+model\Instructor.class
+service\StudentService.class
+model\Evaluation.class
+service\CourseService.class
+utils\PrinterHelper.class
+model\Person.class

@@ -1,0 +1,33 @@
+.search-form {
+    display: flex;
+    padding: 20px 0;
+    max-width: 780px !important;
+    margin: 0 auto;
+    border: 2px purple solid;
+    border-radius: 10px;
+    background-color: lightgreen;
+}
+
+.full-width {
+    width: 100%;
+    background-color: lightskyblue;
+    padding: 15px 0;
+}
+
+.search-input {
+    width: 100%;
+    margin: 0 15px;
+}
+
+.search-input, button {
+    display: block ;
+    padding: .5rem;
+    border-radius: 10px;
+    border: 2px #282c34 solid;
+}
+
+button {
+    background-color: lightgreen;
+    width: 20%;
+    margin-right: 15px;
+}

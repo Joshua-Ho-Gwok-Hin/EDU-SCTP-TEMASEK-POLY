@@ -1,0 +1,37 @@
+.trackcard {
+    background-color: lightskyblue;
+    padding: .25rem 1rem;
+    border-radius: 0.5em;
+    margin: 0.5rem 0;
+    display: flex;
+}
+
+.flex-items {
+    display: block;
+}
+
+.flex-left {
+    width: 100%;
+}
+
+.flex-right {
+    align-self:center;
+}
+
+.track-button {
+    background-color: lightskyblue;
+    border: none;
+    font-size: x-large;
+    padding: 0px;
+    margin: 0px;
+}
+
+.track-name {
+    padding: 0px;
+    margin: 10px 0px;
+}
+
+.track-description {
+    padding: 0px;
+    margin: 12px 0px;
+}

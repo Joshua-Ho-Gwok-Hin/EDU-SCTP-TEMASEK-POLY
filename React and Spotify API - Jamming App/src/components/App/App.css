@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.App-logo {
+  pointer-events: none;
+  height: 50px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 3s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.topbar {
+  background-color: #282c34;
+  position: sticky;
+  height: 50px;
+  top: 0;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-items {
+  display: block;
+  color: white;
+}
+
+.flex-items p {
+  font-size: 14px;
+}
+
+title {
+  font-size: x-large;
+  padding-top: 6px;
+}
+
+.push-footer {
+  min-height: calc(100vh - 100px);
+}
+
+.footer {
+  height: 50px;
+  background-color: #282c34;
+  color: white;
+  font-size: 14px;
+}
+
+.container-780 {
+  max-width: 780px !important;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.floating-box-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5em;
+}
+
+.floating-box{
+  border: 0.5em solid lightgray;
+  border-radius: 2em;
+  margin: 2em;
+  padding: 2em;
+  height: 100%;
+  min-height: 200px;
+}
